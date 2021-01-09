@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	esources :drinks
+	resources :drinks
   resources :genres, only: [:new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  root to: 'home#index'
