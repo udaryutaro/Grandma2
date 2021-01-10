@@ -1,0 +1,13 @@
+<h1>Drink Genre</h1>
+
+<% if flash[:error] %>
+  <div class="flash">
+    <%= flash[:error] %>
+  </div>
+<% end %>
+
+<%= form_for(@genre) do |f| %>
+<h2>genre Name</h2>
+<div class="black"><%= f.text_field :name %></div>
+<%= f.submit '投稿', class: "btn btn-primary col-xs-3" %>
+<% end %>
