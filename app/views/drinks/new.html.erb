@@ -1,0 +1,12 @@
+<h1>New Drink</h1>
+<%= form_for(@drink) do |f| %>
+<h2>Drink Name</h2>
+<div class="black"><%= f.text_field :drink_name %></div>
+<%= f.attachment_field :image %>
+<h2>Details</h2>
+<div class="black"><%= f.text_area :body %></div>
+<h2>Genre</h2>
+<div class="black"><%= f.collection_select :genre_id, Genre.all, :id, :name, :prompt => "選択して下さい" %></div>
+<h2>a</h2>
+<%= f.submit '投稿', class: "btn btn-primary col-xs-3" %>
+<% end %>
