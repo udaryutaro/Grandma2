@@ -1,1 +1,29 @@
-<h1>こんにちは</h1>
+<div class="title">
+	<h1 class="text-center">Drink Menu</h1>
+</div>
+
+<div class="row">
+	<div class="col-xs-2">
+		<div class="genre">
+			<h5>ジャンルで探す</h5>
+			<h5><%= link_to "すべてのジャンル", drinks_path %></h5></h5>
+			<% @genres.each do |genre| %>
+				<h5 class="genrelist"><%= link_to genre.name, drinks_path(genre_id: genre.id) %></h5>
+			<% end %>
+		</div>
+	</div>
+	<div class="col-xs-10">
+		<% if params[:genre_id] %>
+		    <div class="drink-title"><h4><%= @genre.name %></h4><p>(全<%= @drinks.count %>件)</p></div>
+		<% else %>
+		　　　<div class="drink-title-all"><h4>すべてのジャンル</h4><p>(全<%= @drinks.count %>件)</p></div>
+		<% end %>
+
+		<% @drinks.each do |drink| %>
+			<%= link_to drink_path(drink.id) do %>
+	    		<figure class="drinks-image"><%= attachment_image_tag(drink, :image, :fill, 200, 200)%></figure>
+	    	<% end %><br>
+	    	<p><%= drink.drink_name %></p>
+		<% end %>
+	</div>
+</div>
