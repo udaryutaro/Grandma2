@@ -1,1 +1,6 @@
-<h1>hellow</h1>
+<h1>Drink</h1>
+<%= @drink.drink_name %>
+<%= attachment_image_tag(@drink, :image, :fill, 500, 500)%>
+<%= @drink.body %>
+<%= link_to "編集", edit_drink_path(@drink.id), class: "btn btn-info "  %>
+<%= link_to "削除", drink_path, method: :delete, "data-confirm" => "本当に削除しますか？",class: "btn btn-danger"  %>

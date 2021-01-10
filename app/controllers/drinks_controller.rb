@@ -1,12 +1,15 @@
 class DrinksController < ApplicationController
+
 def new
   	@drink = Drink.new
   end
+
   def create
   	drink = Drink.new(drink_params)
   	drink.save
   	redirect_to drinks_path
   end
+
   def index
   	@drink = Drink.all
 	@genres = Genre.all
@@ -21,6 +24,23 @@ def new
 	        @drinks = Drink.order(created_at: :desc).all.page(params[:page]).per(8)
     	end
   end
+
+  def show
+  	@drink = Drink.find(params[:id])
+  end
+
+  def edit
+  	
+  end
+
+  def update
+  	
+  end
+
+  def destroy
+  	
+  end
+
   private
   	def drink_params
   	params.require(:drink).permit(:drink_name, :image, :body, :genre_id )
