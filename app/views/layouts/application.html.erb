@@ -10,6 +10,26 @@
   </head>
 
   <body>
+    <header class="navbar navbar-fixed-top navbar-inverse bg-dark" >
+     <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-dark">
+          <li>
+            <%= link_to "Top page", root_path %>
+          </li>
+          <li>
+            <%= link_to "New Drink", new_drink_path %>
+          </li>
+          <li>
+            <%= link_to "Drink List", drinks_path %>
+          </li>
+          <li>
+            <%= link_to "New Genre", new_genre_path %>
+          </li>
+        </ul>
+      </nav>
+     </div>
+    </header>
     <%= yield %>
   </body>
 </html>

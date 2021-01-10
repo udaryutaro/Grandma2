@@ -1,3 +1,34 @@
 // Place all the styles related to the drinks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.drink-title{
+	margin-bottom: 20px;
+}
+.drink-title-all{
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+.drink{
+	display: inline-block;
+	margin-right: 16px;
+	margin-bottom: 16px;
+}
+.drink-image {
+ margin-bottom: 16px;
+ overflow: hidden;
+ height: 200px;
+}
+.drink img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.odrink-image img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.show_title {
+  text-align: center;
+}
