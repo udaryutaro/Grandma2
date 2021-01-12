@@ -21,3 +21,6 @@
 - 言語：HTML,CSS,Ruby
 - フレームワーク：Ruby on Rails
 - 仮想環境：Vagrant
+
+## 補足事項
+Git Hubのアドレス設定をprivateにしていたため草を生やすことができていませんでした。
